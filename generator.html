@@ -42,7 +42,7 @@
         <md-checkbox ng-model="useCropMarks"></md-checkbox>
         Show punch marks
         <md-checkbox ng-model="usePunchMarks"></md-checkbox>
-        <md-button ng-click="generateCalendar()" class="md-raised">Generate</md-button>
+        <md-button ng-click="generateTemplate()" class="md-raised">Generate</md-button>
         <md-progress-linear ng-if="generationProgress" md-mode="determinate" value="{{generationProgress}}"></md-progress-linear>
       </md-content>
       <div class="printBody" ng-repeat="page in pages">
