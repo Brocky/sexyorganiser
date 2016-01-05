@@ -1,3 +1,7 @@
+@page  {
+  size: 14.8cm 21cm;
+}
+
 body {
   font-size: 11.5pt;
 }
@@ -16,8 +20,8 @@ body {
 }
 
 .pageBody {
-  width: 14.2cm;
-  height: 20cm;
+  width: 100%;
+  height: 100%;
   padding: 0.5cm 0.5cm 0.5cm 2.2cm;
 }
 
