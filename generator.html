@@ -28,8 +28,9 @@
           <option value="personal">Personal</option>
         </select>
         Template:
-        <select ng-model="template">
+        <select ng-model="template" ng-change="generateTemplate()">
           <option value="oneDayOnOnePage">1 Day / 1 Page</option>
+          <option value="oneYearOnOnePage">1 Year / 1 Page</option>
         </select>
         Style:
         <select ng-model="style">

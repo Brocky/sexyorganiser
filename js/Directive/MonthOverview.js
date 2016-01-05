@@ -43,10 +43,9 @@ module.exports = function(){
           [calendar.getWeekOfYear(date)]
           ['active'] = true;
 
-        while (nextCount > 0) {
-          var monthdate = new Date(date.getFullYear(), date.getMonth() + nextCount, 1);
+        for (var i = 0; i <= nextCount; i++) {
+          var monthdate = new Date(date.getFullYear(), date.getMonth() + i, 1);
           months[$filter('date')(monthdate, 'yyyyMM')] = calendar.getMonth(monthdate);
-          nextCount--;
         }
 
         return months;
