@@ -13,7 +13,6 @@ var holidaysService = require('./Service/Holidays.js');
 var calendarService = require('./Service/Calendar.js');
 var calendarController = require('./Controller/Calendar.js');
 var threeMonthDirective = require('./Directive/ThreeMonth.js');
-var datepickerDirective = require('./Directive/Datepicker.js');
 
 calendarApp.factory('holidays', holidaysService);
 calendarApp.factory('calendar', calendarService);
