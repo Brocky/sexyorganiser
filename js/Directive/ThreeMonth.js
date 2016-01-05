@@ -1,5 +1,6 @@
 /**
- * Created by hbrockmann on 29.12.2015.
+ * Three month directive
+ * @module Directive/ThreeMonth
  */
 
 module.exports = function(){

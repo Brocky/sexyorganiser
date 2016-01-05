@@ -1,5 +1,6 @@
 /**
- * Created by hbrockmann on 29.12.2015.
+ * Holiday service
+ * @module Service/Holiday
  */
 
 module.exports = ['$filter', function($filter) {

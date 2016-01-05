@@ -1,5 +1,6 @@
 /**
- * Created by hbrockmann on 29.12.2015.
+ * Calendar controller
+ * @module Controller/Calendar
  */
 
 module.exports = ['$scope', 'calendar', '$mdDialog', function($scope, calendar, $mdDialog) {

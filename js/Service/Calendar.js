@@ -1,5 +1,6 @@
 /**
- * Created by hbrockmann on 30.12.2015.
+ * Calendar service
+ * @module Service/Calendar
  */
 
 module.exports = ['$filter','holidays', function($filter, holidays) {
