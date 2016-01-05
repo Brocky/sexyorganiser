@@ -3,28 +3,45 @@
  * @module Controller/Calendar
  */
 
-module.exports = ['$scope', 'calendar', '$mdDialog', function($scope, calendar, $mdDialog) {
+module.exports = ['$scope', 'calendar', 'session', function($scope, calendar, session) {
 
-    function DialogController($scope, $mdDialog, calendarController) {
-        $scope.progress = calendarController.generationProgress;
-
-        calendarController.$watch('generationProgress', function() {
-            $scope.progress = calendarController.generationProgress;
-            if (calendarController.generationProgress == 100) {
-                $mdDialog.hide();
-            }
-        });
-    }
+    var startDate = session.getValue('startDate') ? new Date(session.getValue('startDate')) : new Date();
+    var endDate   = session.getValue('endDate') ? new Date(session.getValue('endDate')) : new Date(
+      startDate.getFullYear(),
+      startDate.getMonth(),
+      startDate.getDate() + 1
+    );
 
     $scope.days = [];
     $scope.pages = [];
-    $scope.pageSize = 'a5';
-    $scope.style = 'oneDayOnOnePage';
-    $scope.startDate = new Date("2016-01-01");
-    $scope.endDate   = new Date("2016-01-01");
+    $scope.pageSize = session.getValue('pageSize') | 'a5';
+    $scope.style = session.getValue('style') | 'oneDayOnOnePage';
+    $scope.startDate = startDate;
+    $scope.endDate   = endDate;
     $scope.generationProgress  = 0;
-    $scope.useCropMarks = true;
-    $scope.usePunshMarks = true;
+    $scope.useCropMarks = session.getValue('useCropMarks') | true;
+    $scope.usePunshMarks = session.getValue('usePunshMarks') | true;
+
+    console.log($scope.startDate);
+
+    $scope.$watch('pageSize', function(newValue) {
+        session.setValue('pageSize', newValue);
+    });
+    $scope.$watch('style', function(newValue) {
+        session.setValue('style', newValue);
+    });
+    $scope.$watch('startDate', function(newValue) {
+        session.setValue('startDate', newValue);
+    });
+    $scope.$watch('endDate', function(newValue) {
+        session.setValue('endDate', newValue);
+    });
+    $scope.$watch('useCropMarks', function(newValue) {
+        session.setValue('useCropMarks', newValue);
+    });
+    $scope.$watch('usePunshMarks', function(newValue) {
+        session.setValue('usePunshMarks', newValue);
+    });
 
     $scope.generateCalendar = function() {
         $scope.days = [];
@@ -65,22 +82,6 @@ module.exports = ['$scope', 'calendar', '$mdDialog', function($scope, calendar, 
             i++;
             $scope.generationProgress = (i / numOfDays) * 100;
         }
-
-        console.log($scope.pages);
-    };
-
-    $scope.startGeneration = function(ev) {
-        $scope.generationProgress = 0;
-        $mdDialog.show({
-            templateUrl: 'templates/progressDialog.html',
-            parent: angular.element(document.body),
-            targetEvent: ev,
-            controller: DialogController,
-            locals: {
-                calendarController: $scope
-            }
-        });
-        setTimeout($scope.generateCalendar,5);
     };
 
     $scope.generateCalendar();
