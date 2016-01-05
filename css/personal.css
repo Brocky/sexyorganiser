@@ -19,13 +19,12 @@ body {
 }
 
 .pageBody {
-  width: 9.5cm;
-  height: 17.1cm;
-  padding: 0.3cm 0.3cm 0.3cm 1.2cm;
-  margin: 0.04cm;
+  width: 9.7cm;
+  height: 17.3cm;
+  padding: 0.4cm 0.4cm 0.4cm 1.3cm;
+  margin: 0;
   float: left;
   box-sizing: padding-box !important;
-  border: dotted 0.01cm #000;
 }
 .printBody:nth-child(odd) .pageBody {
   float: right;
@@ -34,49 +33,72 @@ body {
   padding: 0.3cm 1.2cm 0.3cm 0.3cm;
 }
 
-.cropMark, .cropMark>div {
+x-crop-mark {
   position: absolute;
   width: 0.1cm;
   height: 0.1cm;
   box-sizing: border-box;
-}
-.cropMark>div {
-  position: absolute;
   border: solid 0.05cm #000;
 }
-
-.cropMark:nth-child(2) {
-  top: -0.1cm;
-  left: -0.1cm;
-}
-.cropMark:nth-child(2)>div {
+x-crop-mark:nth-of-type(1) {
+  top: 0;
+  left: 0;
   border-top: none;
   border-left: none;
 }
 
-.cropMark:nth-child(3){
-  top: -0.1cm;
-  right: -0.1cm;
-}
-.cropMark:nth-child(3)>div {
+x-crop-mark:nth-of-type(2){
+  top: 0;
+  right: 0;
   border-top: none;
   border-right: none;
 }
 
-.cropMark:nth-child(4) {
-  bottom: -0.1cm;
-  left: -0.1cm;
-}
-.cropMark:nth-child(4)>div {
+x-crop-mark:nth-of-type(3) {
+  bottom: 0;
+  left: 0;
   border-bottom: none;
   border-left: none;
 }
 
-.cropMark:nth-child(5) {
-  bottom: -0.1cm;
-  right: -0.1cm;
-}
-.cropMark:nth-child(5)>div {
+x-crop-mark:nth-of-type(4) {
+  bottom: 0;
+  right: 0;
   border-bottom: none;
   border-right: none;
+}
+
+x-punsh-mark {
+  display: block;
+  height: 5mm;
+  width: 5mm;
+  border: 0.1mm dotted rgb(0, 0, 0);
+  border-radius: 5mm;
+  position: absolute;
+  right: auto;
+  left: 6.6mm;
+  margin: -2.5mm;
+  opacity: 0.2;
+}
+.even x-punsh-mark {
+  right: 6.6mm;
+  left: auto;
+}
+x-punsh-mark:nth-of-type(1) {
+  top: 2.4cm;
+}
+x-punsh-mark:nth-of-type(2) {
+  top: 4.15cm;
+}
+x-punsh-mark:nth-of-type(3) {
+  top: 6.05cm;
+}
+x-punsh-mark:nth-of-type(4) {
+  bottom: 2.4cm;
+}
+x-punsh-mark:nth-of-type(5) {
+  bottom: 4.15cm;
+}
+x-punsh-mark:nth-of-type(6) {
+  bottom: 6.05cm;
 }

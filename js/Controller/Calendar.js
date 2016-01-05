@@ -23,6 +23,8 @@ module.exports = ['$scope', 'calendar', '$mdDialog', function($scope, calendar, 
     $scope.startDate = new Date("2016-01-01");
     $scope.endDate   = new Date("2016-01-01");
     $scope.generationProgress  = 0;
+    $scope.useCropMarks = true;
+    $scope.usePunshMarks = true;
 
     $scope.generateCalendar = function() {
         $scope.days = [];
