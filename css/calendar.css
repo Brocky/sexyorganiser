@@ -67,25 +67,25 @@ h2.pageHead{
     text-align: right;
     width: 1.75em;
 }
-three-month {
+month-overview {
     float: left;
 }
-.even three-month {
+.even month-overview {
     float: right;
 }
-three-month > table {
+month-overview > table {
     float: left;
     text-align: right;
     margin-left: 6pt;
 }
 
-three-month td, three-month th{
+month-overview td, month-overview th{
     padding: 0.117em;
 }
-three-month td.holiday{
+month-overview td.holiday{
     color: crimson;
 }
-three-month th.monthName {
+month-overview th.monthName {
 	text-align: center;
 	border-bottom: medium none;
 	background: transparent none repeat scroll 0% 0%;

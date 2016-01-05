@@ -4,7 +4,7 @@
   </h2>
   <div class="overview {{day.dayOfWeek}}" ng-class="{holiday: day.holidayName}">
       <div class="threeMonth">
-          <three-month ng-model="day.date"></three-month>
+          <month-overview ng-model="day.date"></month-overview>
       </div>
       <div class="dayNumber">{{day.date | date : 'd'}}<span class="weekOfYear"><br>KW {{day.weekOfYear}}</span></div>
       <div class="dayName">

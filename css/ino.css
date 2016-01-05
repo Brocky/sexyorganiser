@@ -56,26 +56,26 @@ h2.pageHead {
     border-bottom: solid 0.1em rgba(30, 78, 108, 1);
 }
 
-three-month{
+month-overview{
     font-family: 'Ubuntu Condensed';
     font-size: 0.8em;
     margin-bottom: 2em;
 }
 
-three-month > table {
+month-overview > table {
     font-size: 0.5em; /* 6pt */
 }
-three-month td.active{
+month-overview td.active{
     border-radius: 0.25em; /* 3pt */
     font-weight: 700;
 }
 
-three-month td.active{
+month-overview td.active{
     border: solid 0.1em rgba(30, 78, 108, 1);
 }
-three-month thead th{
+month-overview thead th{
     border-bottom: solid 0.067em rgba(30, 78, 108, 1);
 }
-three-month tbody th{
+month-overview tbody th{
     border-right: solid 0.067em rgba(30, 78, 108, 1);
 }

@@ -89,7 +89,7 @@ h2.pageHead {
 .timeTable td.label {
     font-family: 'saxmonoregular';
 }
-three-month:before {
+month-overview:before {
     content: '';
     display: block;
     width: 12em;
@@ -102,7 +102,7 @@ three-month:before {
     transform: rotate(-22deg);
     opacity: 0.2;
 }
-.even three-month:before {
+.even month-overview:before {
     content: '';
     display: block;
     width: 12em;
@@ -116,37 +116,37 @@ three-month:before {
     opacity: 0.2;
 }
 
-three-month {
+month-overview {
     font-family: 'saxmonoregular';
 }
-three-month > table {
+month-overview > table {
     background-color: rgba(255,255,255,0.5);
     font-size: 0.5em; /* 6pt */
 }
-three-month td.active{
+month-overview td.active{
     border-radius: 0.25em; /* 3pt */
     font-weight: 700;
 }
-three-month thead th{
+month-overview thead th{
     font-family: 'Walt-Disney-Script-v41', cursive;
 }
-three-month tr.active td {
+month-overview tr.active td {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,2b7571+100&0+79,0.31+100 */
     background: -moz-linear-gradient(top,  rgba(125,185,232,0) 0%, rgba(60,131,138,0) 79%, rgba(43,117,113,0.31) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top,  rgba(125,185,232,0) 0%,rgba(60,131,138,0) 79%,rgba(43,117,113,0.31) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom,  rgba(125,185,232,0) 0%,rgba(60,131,138,0) 79%,rgba(43,117,113,0.31) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#4f2b7571',GradientType=0 ); /* IE6-9 */
 }
-three-month td.active{
+month-overview td.active{
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#53e3dd+0,00cec4+100 */
     background: -moz-radial-gradient(center, ellipse cover, rgba(83,227,221, 0.2) 0%, rgba(0, 206, 196, 0.2) 100%) !important; /* FF3.6-15 */
     background: -webkit-radial-gradient(center, ellipse cover, rgba(83,227,221, 0.2) 0%,rgba(0,206,196, 0.2) 100%) !important; /* Chrome10-25,Safari5.1-6 */
     background: radial-gradient(ellipse at center, rgba(83,227,221, 0.2) 0%,rgba(0,206,196, 0.4) 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#53e3dd', endColorstr='#00cec4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
-three-month thead th{
+month-overview thead th{
     border-bottom: solid 0.067em rgba(43,117,113,0.87);
 }
-three-month tbody th{
+month-overview tbody th{
     border-right: solid 0.067em rgba(43,117,113,0.87);
 }

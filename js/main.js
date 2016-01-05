@@ -14,11 +14,11 @@ var holidaysService = require('./Service/Holidays.js');
 var calendarService = require('./Service/Calendar.js');
 var oneDayOnOnePageService = require('./Service/oneDayOnOnePage.js');
 var templateController = require('./Controller/Template.js');
-var threeMonthDirective = require('./Directive/ThreeMonth.js');
+var monthOverviewDirective = require('./Directive/MonthOverview.js');
 
 calendarApp.factory('session', sessionService);
 calendarApp.factory('holidays', holidaysService);
 calendarApp.factory('calendar', calendarService);
 calendarApp.factory('oneDayOnOnePage', oneDayOnOnePageService);
 calendarApp.controller('templateController', templateController);
-calendarApp.directive('threeMonth', threeMonthDirective);
+calendarApp.directive('monthOverview', monthOverviewDirective);
