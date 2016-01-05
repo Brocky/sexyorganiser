@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" ng-href="css/{{pageSize}}.css">
     <link rel="stylesheet" href="css/calendar.css">
-    <link rel="stylesheet" href="css/shield.css">
+    <link rel="stylesheet" ng-href="css/{{style}}.css">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 
     <script src="js/bundle.js"></script>
@@ -28,10 +28,16 @@
       <option value="a5">A5</option>
       <option value="personal">Personal</option>
     </select>
+    Style:
+    <select ng-model="style">
+      <option value="disney">Disney</option>
+      <option value="shield">Agents of S.H.I.E.L.D.</option>
+      <option value="ino">Borkum Special</option>
+    </select>
     Show crop marks
     <md-checkbox ng-model="useCropMarks"></md-checkbox>
-    Show punsh marks
-    <md-checkbox ng-model="usePunshMarks"></md-checkbox>
+    Show punch marks
+    <md-checkbox ng-model="usePunchMarks"></md-checkbox>
       <md-button ng-click="generateCalendar()" class="md-raised">Generate</md-button>
       <md-progress-linear ng-if="generationProgress" md-mode="determinate" value="{{generationProgress}}"></md-progress-linear>
   </md-content>
@@ -42,12 +48,12 @@
       <x-crop-mark ng-if="$parent.$parent.useCropMarks"></x-crop-mark>
       <x-crop-mark ng-if="$parent.$parent.useCropMarks"></x-crop-mark>
       <x-crop-mark ng-if="$parent.$parent.useCropMarks"></x-crop-mark>
-      <x-punsh-mark ng-if="$parent.$parent.usePunshMarks"></x-punsh-mark>
-      <x-punsh-mark ng-if="$parent.$parent.usePunshMarks"></x-punsh-mark>
-      <x-punsh-mark ng-if="$parent.$parent.usePunshMarks"></x-punsh-mark>
-      <x-punsh-mark ng-if="$parent.$parent.usePunshMarks"></x-punsh-mark>
-      <x-punsh-mark ng-if="$parent.$parent.usePunshMarks"></x-punsh-mark>
-      <x-punsh-mark ng-if="$parent.$parent.usePunshMarks"></x-punsh-mark>
+      <x-punsh-mark ng-if="$parent.$parent.usePunchMarks"></x-punsh-mark>
+      <x-punsh-mark ng-if="$parent.$parent.usePunchMarks"></x-punsh-mark>
+      <x-punsh-mark ng-if="$parent.$parent.usePunchMarks"></x-punsh-mark>
+      <x-punsh-mark ng-if="$parent.$parent.usePunchMarks"></x-punsh-mark>
+      <x-punsh-mark ng-if="$parent.$parent.usePunchMarks"></x-punsh-mark>
+      <x-punsh-mark ng-if="$parent.$parent.usePunchMarks"></x-punsh-mark>
     </div>
   </div>
 </md-content>

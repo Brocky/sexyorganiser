@@ -6,7 +6,7 @@
       <div class="threeMonth">
           <three-month ng-model="day.date"></three-month>
       </div>
-      <div class="dayNumber">{{day.date | date : 'd'}}</div>
+      <div class="dayNumber">{{day.date | date : 'd'}}<span class="weekOfYear"><br>KW {{day.weekOfYear}}</span></div>
       <div class="dayName">
           {{day.date | date : 'EEEE'}}
           <div class="holidayName" ng-if="day.holidayName">{{day.holidayName}}</div>

@@ -40,6 +40,9 @@ h2.pageHead{
 .holiday .dayName, .holiday .dayNumber {
     color: crimson;
 }
+.weekOfYear {
+    font-size: 0.5em;
+}
 .dayName {
     float: right;
 }

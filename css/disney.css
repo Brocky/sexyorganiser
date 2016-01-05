@@ -67,6 +67,9 @@ h2.pageHead {
     font-family: 'saxmonoregular';
     font-size: 2.667em; /* 32pt */
 }
+.weekOfYear {
+    display: none;
+}
 
 .dayName {
     font-size: 1.167em; /* 14pt */

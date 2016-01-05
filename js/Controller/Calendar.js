@@ -14,13 +14,13 @@ module.exports = ['$scope', 'calendar', 'session', function($scope, calendar, se
 
     $scope.days = [];
     $scope.pages = [];
-    $scope.pageSize = session.getValue('pageSize') | 'a5';
-    $scope.style = session.getValue('style') | 'oneDayOnOnePage';
+    $scope.pageSize = session.getValue('pageSize', 'a5');
+    $scope.style = session.getValue('style', 'disney');
     $scope.startDate = startDate;
     $scope.endDate   = endDate;
     $scope.generationProgress  = 0;
-    $scope.useCropMarks = session.getValue('useCropMarks') | true;
-    $scope.usePunshMarks = session.getValue('usePunshMarks') | true;
+    $scope.useCropMarks = session.getValue('useCropMarks', 'true') === 'true';
+    $scope.usePunchMarks = session.getValue('usePunchMarks', 'true') === 'true';
 
     console.log($scope.startDate);
 
@@ -39,8 +39,8 @@ module.exports = ['$scope', 'calendar', 'session', function($scope, calendar, se
     $scope.$watch('useCropMarks', function(newValue) {
         session.setValue('useCropMarks', newValue);
     });
-    $scope.$watch('usePunshMarks', function(newValue) {
-        session.setValue('usePunshMarks', newValue);
+    $scope.$watch('usePunchMarks', function(newValue) {
+        session.setValue('usePunchMarks', newValue);
     });
 
     $scope.generateCalendar = function() {
