@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/css" href="calendar.css"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="starsBack"
+   viewBox="0 0 419.23688 177.90328"
+   height="50.20826mm"
+   width="118.31796mm">
+   <style>
+     #starsBack .background {
+       fill: #53e3dd;
+     }
+     #starsBack .star {
+       stroke: rgba(43,117,113,0.87);
+       stroke-width: 9.5;
+       stroke-linecap: round;
+       stroke-linejoin: round;
+       fill: none;
+     }
+   </style>
+  <metadata
+     id="starsMetadata">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Stars</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <rect width='100%' height='100%' class="background"/>
+  <g
+     transform="translate(-5.378151,-7.6014953)"
+     id="layer1">
+    <path
+       d="M 148.57143,175.21936 95.683275,147.36787 42.756782,175.14644 52.901779,116.24023 10.127606,74.488195 69.285714,65.933642 95.776314,12.350897 122.19304,65.9701 181.3393,74.606178 138.50763,116.29922 Z"
+       id="path4138"
+       class="star" />
+    <path
+       d="m 300,166.64792 -36.85693,-10.37356 -29.44024,24.48093 -1.52357,-38.25863 -32.38028,-20.43431 35.9153,-13.27157 9.42813,-37.110027 23.72045,30.056347 38.20719,-2.500946 -21.25526,31.847406 z"
+       id="path4140"
+       class="star" />
+    <path
+       d="m 384.28569,105.21936 -20.24071,-23.8637 -31.13311,3.145117 16.441,-26.624344 -12.61184,-28.637454 30.4018,7.408947 23.33856,-20.844036 2.34835,31.203325 27.03587,15.75513 -28.95045,11.875769 z"
+       id="path4142"
+       class="star" />
+  </g>
+</svg>

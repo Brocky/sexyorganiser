@@ -1,0 +1,28 @@
+{
+  "name": "sexyorganiser",
+  "version": "0.1.0",
+  "description": "Genrates filofax templates",
+  "keywords": [
+    "filofax"
+  ],
+  "private": true,
+  "author": "Heiko Brockmann <heiko.brockmann@posteo.de>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "angular": "1.4.x",
+    "angular-animate": "1.4.x",
+    "angular-aria": "1.4.x",
+    "angular-i18n": "1.4.x",
+    "angular-material": "1.0.x",
+    "jquery": "^2.1.4",
+    "jquery-ui": "^1.10.5"
+  },
+  "devDependencies": {
+    "browserify": "latest",
+    "watchify": "latest"
+  },
+  "scripts": {
+    "build-js": "browserify js/main.js -o js/bundle.js",
+    "watch-js": "watchify js/main.js -o js/bundle.js"
+  }
+}

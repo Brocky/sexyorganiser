@@ -1,0 +1,39 @@
+<div class="day" ng-repeat="day in $parent.subPage.days">
+  <h2 class="pageHead">
+      <span>{{day.date | date : 'MMMM'}} <span>{{day.date | date : 'yyyy'}}</span></span>
+  </h2>
+  <div class="overview {{day.dayOfWeek}}" ng-class="{holiday: day.holidayName}">
+      <div class="threeMonth">
+          <three-month ng-model="day.date"></three-month>
+      </div>
+      <div class="dayNumber">{{day.date | date : 'd'}}</div>
+      <div class="dayName">
+          {{day.date | date : 'EEEE'}}
+          <div class="holidayName" ng-if="day.holidayName">{{day.holidayName}}</div>
+      </div>
+  </div>
+  <div class="timeTable">
+      <table>
+          <thead>
+              <tr>
+                  <th class="label"><span class="lnr lnr-clock"></span></th>
+                  <th>Termine</th>
+              </tr>
+          </thead>
+          <tbody ng-repeat="hour in day.hours">
+              <tr>
+                  <td class="label">{{hour}}</td>
+                  <td>&nbsp;</td>
+              </tr>
+              <tr>
+                  <td class="label">&nbsp;</td>
+                  <td>&nbsp;</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+  <hr class="foldMark" />
+  <div class="sexyOrganiser">
+      SexyOrganiser
+  </div>
+</div>

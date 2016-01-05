@@ -1,0 +1,153 @@
+@import url(https://fonts.googleapis.com/css?family=Tangerine:700|Merriweather:700italic);
+
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.pageBody {
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+h2.pageHead{
+    position: relative;
+    margin-bottom: 0.25em;
+    display: block;
+}
+.overview {
+    height: 5em;
+}
+.dayNumber {
+    float: right;
+    width: 1.25em;
+}
+.even .dayNumber {
+    float: left;
+}
+.pageHead, .dayNumber{
+    font-weight: 700;
+    text-align: right;
+}
+.even .pageHead, .even .dayNumber{
+    text-align: left;
+}
+.holiday .dayName, .holiday .dayNumber {
+    color: crimson;
+}
+.dayName {
+    float: right;
+}
+.even .dayName {
+    float: left;
+}
+
+.timeTable {
+    position: relative;
+    clear: both;
+}
+.timeTable > table {
+    width: 100%;
+}
+.timeTable td {
+    padding: 0;
+}
+.timeTable th {
+    text-align: left;
+}
+.timeTable td.label {
+    text-align: right;
+    width: 1.75em;
+}
+three-month {
+    float: left;
+}
+.even three-month {
+    float: right;
+}
+three-month > table {
+    float: left;
+    text-align: right;
+    margin-left: 6pt;
+}
+
+three-month td, three-month th{
+    padding: 0.117em;
+}
+three-month td.holiday{
+    color: crimson;
+}
+three-month th.monthName {
+	text-align: center;
+	border-bottom: medium none;
+	background: transparent none repeat scroll 0% 0%;
+	font-size: 1.75em;
+	position: relative;
+	top: -1.25em;
+	line-height: 0;
+}
+
+hr.foldMark {
+    position: absolute;
+    top: 49.9%;
+    width: 4%;
+    left: 0;
+    right: auto;
+    border: 1px solid rgb(207, 207, 207);
+}
+.even hr.foldMark {
+    left: auto;
+    right: 0;
+}
+
+div.sexyOrganiser::first-letter {
+    font-family: 'Tangerine', cursive;
+    font-size: 1.75em;
+    letter-spacing: 0.18em;
+    font-style: normal;
+}
+div.sexyOrganiser {
+    font-family: "Merriweather",serif;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    transform: rotate(-90deg);
+    left: 1.8em;
+    right: auto;
+    color: #CFCFCF;
+    margin-left: -4.625em;
+    margin-right: -4.625em;
+    width: 9.25em;
+    font-size: 0.75em;
+    text-align: center;
+    background-color: #ffffff;
+}
+.even div.sexyOrganiser {
+    right: 1.8em;
+    left: auto;
+}
+
+@media screen {
+    .wrapper{
+        background-color: darkgray;
+    }
+    .printBody {
+        margin: auto;
+        margin-bottom: 12px;
+        box-shadow: 3px 6px 18px 0 rgba(0,0,0,0.64);
+        page-break-after: always;
+    }
+}
+
+@media print {
+    .generateControl {
+        display: none;
+    }
+}

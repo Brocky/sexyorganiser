@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="calendarApp" ng-controller="calendarController">
+<head>
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" media="screen" href="node_modules/angular-material/angular-material.css">
+
+    <link rel="stylesheet" ng-href="css/{{pageSize}}.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/shield.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+    <script src="js/bundle.js"></script>
+    <script src="node_modules/angular-i18n/angular-locale_de-de.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body ng-cloak>
+<md-content class="wrapper">
+  <md-content class="generateControl">
+      Start Date:
+      <md-datepicker ng-model="startDate" md-placeholder="Enter date"></md-datepicker>
+      End Date:
+      <md-datepicker ng-model="endDate" md-placeholder="Enter date"></md-datepicker>
+      Page Size:
+      <select ng-model="pageSize" ng-change="generateCalendar()">
+        <option value="a5">A5</option>
+        <option value="personal">Personal</option>
+      </select>
+      <md-button ng-click="generateCalendar()" class="md-raised">Generate</md-button>
+      <md-progress-linear ng-if="generationProgress" md-mode="determinate" value="{{generationProgress}}"></md-progress-linear>
+  </md-content>
+  <div class="printBody" ng-repeat="page in pages">
+    <div class="pageBody" ng-class="{even: page.even}" ng-repeat="subPage in page.subPages">
+      <ng-include src="'./templates/oneDayOnOnePage.html'"></ng-include>
+      <div class="cropMark"><div></div></div>
+      <div class="cropMark"><div></div></div>
+      <div class="cropMark"><div></div></div>
+      <div class="cropMark"><div></div></div>
+    </div>
+  </div>
+</md-content>
+</body>
+</html>

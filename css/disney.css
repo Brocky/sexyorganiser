@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'Walt-Disney-Script-v41';
+    src:url('../fonts/Walt-Disney-Script-v41.ttf.woff') format('woff'),
+    url('../fonts/Walt-Disney-Script-v41.ttf.svg#Walt-Disney-Script-v41') format('svg'),
+    url('../fonts/Walt-Disney-Script-v41.ttf.eot'),
+    url('../fonts/Walt-Disney-Script-v41.ttf.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Walt_Disney_Script.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'saxmonoregular';
+    src: url('../fonts/saxmono-webfont.eot');
+    src: url('../fonts/saxmono-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/saxmono-webfont.woff') format('woff'),
+    url('../fonts/saxmono-webfont.ttf') format('truetype'),
+    url('../fonts/saxmono-webfont.svg#saxmonoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.pageBody {
+    font-family: 'Walt-Disney-Script-v41', cursive;
+    color: rgba(43,117,113,1);
+}
+.pageBody::before {
+  content: '';
+  position: absolute;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+19 */
+  background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 19%, rgba(255,255,255,1) 100%), #53e3dd url('../img/stars.svg') no-repeat scroll 5% 1%; /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 19%,rgba(255,255,255,1) 100%), #53e3dd url('../img/stars.svg') no-repeat scroll 5% 1%; /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 19%,rgba(255,255,255,1) 100%), #53e3dd url('../img/stars.svg') no-repeat scroll 5% 1%; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background-size: 20em;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.pageBody.even::before {
+  transform: rotateY(180deg);
+}
+
+.overview {
+    position: relative;
+}
+
+h2.pageHead {
+    margin-top: 0.5em;
+    border-bottom: double 0.084em rgba(43,117,113,1);
+}
+.pageHead > span {
+    font-size: 3.167em; /* 38pt */
+    font-weight: 500;
+    width: auto;
+    display: inline-block;
+    line-height: 0.526em; /* 20pt */
+}
+.pageHead > span > span {
+    font-size: 0.316em; /* 12pt */
+    font-weight: 700;
+    display: block;
+    text-align: right;
+}
+
+.dayNumber {
+    font-family: 'saxmonoregular';
+    font-size: 2.667em; /* 32pt */
+}
+
+.dayName {
+    font-size: 1.167em; /* 14pt */
+}
+.dayName > .holidayName {
+    font-size: 0.857em; /* 12pt */
+}
+.timeTable td {
+    font-size: 0.667em; /* 8pt */
+    border-bottom: solid 0.084em rgba(43,117,113,0.2);
+}
+.timeTable th {
+    font-size: 1em; /* 12pt */
+    font-weight: 500;
+    border-bottom: solid 0.1em rgba(43,117,113,1);
+}
+.timeTable td.label {
+    font-family: 'saxmonoregular';
+}
+three-month:before {
+    content: '';
+    display: block;
+    width: 12em;
+    height: 11em;
+    position: absolute;
+    top: -4em;
+    right: 0;
+    background-image: url(../img/mickey.svg);
+    background-size: 12em;
+    transform: rotate(-22deg);
+    opacity: 0.2;
+}
+.even three-month:before {
+    content: '';
+    display: block;
+    width: 12em;
+    height: 11em;
+    position: absolute;
+    top: -4em;
+    left: 0;
+    background-image: url(../img/mickey.svg);
+    background-size: 12em;
+    transform: rotate(22deg);
+    opacity: 0.2;
+}
+
+three-month {
+    font-family: 'saxmonoregular';
+}
+three-month > table {
+    background-color: rgba(255,255,255,0.5);
+    font-size: 0.5em; /* 6pt */
+}
+three-month td.active{
+    border-radius: 0.25em; /* 3pt */
+    font-weight: 700;
+}
+three-month thead th{
+    font-family: 'Walt-Disney-Script-v41', cursive;
+}
+three-month tr.active td {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,2b7571+100&0+79,0.31+100 */
+    background: -moz-linear-gradient(top,  rgba(125,185,232,0) 0%, rgba(60,131,138,0) 79%, rgba(43,117,113,0.31) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(125,185,232,0) 0%,rgba(60,131,138,0) 79%,rgba(43,117,113,0.31) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(125,185,232,0) 0%,rgba(60,131,138,0) 79%,rgba(43,117,113,0.31) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#4f2b7571',GradientType=0 ); /* IE6-9 */
+}
+three-month td.active{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#53e3dd+0,00cec4+100 */
+    background: -moz-radial-gradient(center, ellipse cover, rgba(83,227,221, 0.2) 0%, rgba(0, 206, 196, 0.2) 100%) !important; /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(83,227,221, 0.2) 0%,rgba(0,206,196, 0.2) 100%) !important; /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, rgba(83,227,221, 0.2) 0%,rgba(0,206,196, 0.4) 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#53e3dd', endColorstr='#00cec4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+three-month thead th{
+    border-bottom: solid 0.067em rgba(43,117,113,0.87);
+}
+three-month tbody th{
+    border-right: solid 0.067em rgba(43,117,113,0.87);
+}
