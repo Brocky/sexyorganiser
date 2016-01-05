@@ -1,7 +1,3 @@
-@page  {
-  size: 29.7cm 21cm;
-}
-
 body {
   font-size: 9pt;
 }
@@ -11,7 +7,7 @@ body {
   height: 21cm;
   background-color: #ffffff;
   box-sizing: border-box;
-  padding: 0.2cm;
+  padding: 0;
   overflow: hidden;
 }
 
@@ -23,9 +19,9 @@ body {
 }
 
 .pageBody {
-  width: 9.7cm;
-  height: 17.3cm;
-  padding: 0.4cm 0.4cm 0.4cm 1.3cm;
+  width: 9.68cm;
+  height: 17.28cm;
+  padding: 0.39cm 0.39cm 0.38cm 1.29cm;
   margin: 0;
   float: left;
   box-sizing: padding-box !important;
@@ -39,8 +35,8 @@ body {
 
 x-crop-mark {
   position: absolute;
-  width: 0.1cm;
-  height: 0.1cm;
+  width: 0.09cm;
+  height: 0.09cm;
   box-sizing: border-box;
   border: solid 0.05cm #000;
 }

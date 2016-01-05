@@ -145,12 +145,14 @@ div.sexyOrganiser {
         margin: auto;
         margin-bottom: 12px;
         box-shadow: 3px 6px 18px 0 rgba(0,0,0,0.64);
-        page-break-after: always;
     }
 }
 
 @media print {
-    .generateControl {
-        display: none;
-    }
+  .printBody {
+    page-break-after: always;
+  }
+  .generateControl {
+      display: none;
+  }
 }
