@@ -24,6 +24,20 @@ calendarApp.directive('monthOverview', monthOverviewDirective);
 /* Templates */
 var oneDayOnOnePageService = require('./Service/oneDayOnOnePage.js');
 var oneYearOnOnePageService = require('./Service/oneYearOnOnePage.js');
+var documentationOverview = require('./Service/documentationOverview.js');
 
 calendarApp.factory('oneDayOnOnePage', oneDayOnOnePageService);
 calendarApp.factory('oneYearOnOnePage', oneYearOnOnePageService);
+calendarApp.factory('documentationOverview', documentationOverview);
+
+calendarApp.filter('range', function() {
+  return function(input, total) {
+    total = parseInt(total);
+
+    for (var i=0; i<total; i++) {
+      input.push(i);
+    }
+
+    return input;
+  };
+});

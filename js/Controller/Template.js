@@ -22,6 +22,7 @@ module.exports = ['$scope', '$injector', 'session', function($scope, $injector, 
   $scope.usePunchMarks       = session.getValue('usePunchMarks', 'true') === 'true';
   $scope.template            = session.getValue('template', 'oneDayOnOnePage');
 
+  //watch all config values and save to session on chnage
   $scope.$watch('pageSize', function(newValue) {
       session.setValue('pageSize', newValue);
   });
@@ -44,7 +45,8 @@ module.exports = ['$scope', '$injector', 'session', function($scope, $injector, 
     session.setValue('template', newValue);
   });
 
-  $scope.addPage = function (index, page) {
+
+  $scope.addPage = function (index, page, leporello) {
     if ($scope.pageSize == 'personal') {
       var pageIndex  = Math.floor(index / 6) * 2;
       var even = index % 2 == 1;
@@ -60,9 +62,10 @@ module.exports = ['$scope', '$injector', 'session', function($scope, $injector, 
         $scope.pages[pageIndex]['subPages'].push(page);
       }
     } else {
-      $scope.pages.push({subPages: [page], even: index % 2 == 1});
+      $scope.pages.push({subPages: [page], even: index % 2 == 1, leporello: leporello});
     }
   };
+
 
   $scope.generateTemplate = function() {
     $scope.pages = [];

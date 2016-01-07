@@ -1,21 +1,41 @@
-@page  {
-  size: 14.8cm 21cm;
-}
-
 body {
   font-size: 11.5pt;
 }
 
 .printBody {
-  width: 14.8cm;
-  height: 21cm;
+  /* Size of A5 minus 0.35cm on each side */
+  width: 14.1cm;
+  height: 20.3cm;
   background-color: #ffffff;
+}
+.printBody.leporello {
+  /* Size of A4 minus 0.35cm on each side */
+  width: 29.0cm;
+  height: 20.3cm;
+  background-color: #ffffff;
+}
+.leporello .fold {
+  width: 12.8cm;
+}
+.leporello .fold .tab {
+  position: absolute;
+  left: auto;
+  top: 8em;
+  right: 13.1cm;
+  height: 0.65cm;
+  overflow: hidden;
+  transform: rotate(-90deg);
+  transform-origin: left bottom 0;
+}
+.leporello .even .fold .tab {
+  left: 13.1cm;
+  right: auto;
 }
 
 @media print {
   .printBody {
     width: 100%;
-    height: 20cm;
+    height: 20.3cm;
   }
 }
 

@@ -137,6 +137,62 @@ div.sexyOrganiser {
     left: auto;
 }
 
+.documentationOverview {
+  position: relative;
+}
+
+.documentationOverview table {
+  font-size: 0.75em;
+}
+
+.documentationOverview th {
+  vertical-align: bottom;
+}
+
+th.vertical {
+  height: 5em;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+th.vertical > div {
+  box-sizing: border-box;
+  padding-top: 0.5em;
+  transform: translate(0.7em, 1.35em) rotate(315deg);
+  width: 1.8em;
+}
+th.vertical > div > span {
+  border-bottom: 0.1mm solid;
+  padding: 0.05em 0.1em;
+}
+th.vertical.end > div > span {
+  border-bottom: 0.6mm solid;
+}
+
+thead.months th {
+  border-right: 0.6mm solid;
+}
+thead.months th:nth-of-type(1) {
+  border-left: 0.6mm solid;
+}
+
+.documentationOverview input {
+  background: transparent none repeat scroll 0 0;
+  border: medium none;
+}
+
+.documentationOverview th {
+  border-bottom: 0.6mm solid;
+}
+
+.documentationOverview tbody td {
+  border-bottom: 0.01mm solid;
+  border-right: 0.01mm solid;
+}
+.documentationOverview tbody td.end {
+  border-right: 0.6mm solid;
+}
+
 @media screen {
     .wrapper{
         background-color: darkgray;

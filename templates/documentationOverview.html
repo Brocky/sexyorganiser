@@ -1,0 +1,60 @@
+<div class="documentationOverview">
+  <h2>{{$parent.subPage.year}}</h2>
+  <table cellspacing="0" ng-if="$parent.subPage.tables" ng-repeat="table in $parent.subPage.tables">
+    <thead>
+      <tr>
+        <th>Klient</th>
+        <th class="vertical" ng-repeat-start="month in table.months"><div><span>Stunden (Soll)</span></div></th>
+        <th class="vertical"><div><span>Stunden (Ist)</span></div></th>
+        <th class="vertical"><div><span>Zettel abgegeben</span></div></th>
+        <th class="vertical"><div><span>+/-</span></div></th>
+        <th class="vertical"><div><span>Doku geschrieben</span></div></th>
+        <th class="vertical end" ng-repeat-end><div><span>Doku auf Rechner</span></div></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="i in [] | range:10">
+        <td><input type="text" ng-model="$parent.$parent.$parent.tabeInput[i]" /></td>
+        <td ng-repeat-start="month in table.months"></td>
+        <td></td>
+        <td class="check"></td>
+        <td class="check"></td>
+        <td class="check"></td>
+        <td class="check end" ng-repeat-end></td>
+      </tr>
+    </tbody>
+    <thead class="months">
+        <tr>
+          <td></td>
+          <th colspan="6" ng-repeat="month in table.months">
+            {{month.name}}
+          </th>
+        </tr>
+    </thead>
+  </table>
+  <div class="fold" ng-if="!$parent.subPage.tables">
+    <div class="tab">Dokumentationsübersicht {{$parent.subPage.year}}</div>
+    <table cellspacing="0">
+      <thead>
+        <tr>
+          <th>Vertretung</th>
+          <th>Monat</th>
+          <th class="vertical"><div><span>Stunden (Ist)</span></div></th>
+          <th class="vertical"><div><span>Übergabe</span></div></th>
+          <th class="vertical"><div><span>Doku geschrieben</span></div></th>
+          <th class="vertical"><div><span>Doku auf Rechner</span></div></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="i in [] | range:25">
+          <td><input type="text" /></td>
+          <td><input type="text" /></td>
+          <td>&nbsp;</td>
+          <td class="check"></td>
+          <td class="check"></td>
+          <td class="check"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

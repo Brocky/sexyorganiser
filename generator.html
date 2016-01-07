@@ -31,6 +31,7 @@
         <select ng-model="template" ng-change="generateTemplate()">
           <option value="oneDayOnOnePage">1 Day / 1 Page</option>
           <option value="oneYearOnOnePage">1 Year / 1 Page</option>
+          <option value="documentationOverview">Documentation Overview</option>
         </select>
         Style:
         <select ng-model="style">
@@ -45,9 +46,15 @@
         <md-button ng-click="generateTemplate()" class="md-raised">Generate</md-button>
         <md-progress-linear ng-if="generationProgress" md-mode="determinate" value="{{generationProgress}}"></md-progress-linear>
       </md-content>
-      <div class="printBody" ng-repeat="page in pages">
+      <div class="printBody" ng-repeat="page in pages" ng-class="{leporello: page.leporello}">
         <div class="pageBody" ng-class="{even: page.even}" ng-repeat="subPage in page.subPages">
           <ng-include src="'./templates/' + template + '.html'"></ng-include>
+
+          <hr class="foldMark" />
+          <div class="sexyOrganiser">
+            SexyOrganiser
+          </div>
+
           <x-crop-mark ng-if="$parent.$parent.useCropMarks"></x-crop-mark>
           <x-crop-mark ng-if="$parent.$parent.useCropMarks"></x-crop-mark>
           <x-crop-mark ng-if="$parent.$parent.useCropMarks"></x-crop-mark>

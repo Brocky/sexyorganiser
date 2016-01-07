@@ -89,7 +89,7 @@ h2.pageHead {
 .timeTable td.label {
     font-family: 'saxmonoregular';
 }
-month-overview:before {
+month-overview:before, documentationOverview::before {
     content: '';
     display: block;
     width: 12em;
@@ -102,7 +102,7 @@ month-overview:before {
     transform: rotate(-22deg);
     opacity: 0.2;
 }
-.even month-overview:before {
+.even month-overview:before, .even documentationOverview::before {
     content: '';
     display: block;
     width: 12em;
@@ -149,4 +149,8 @@ month-overview thead th{
 }
 month-overview tbody th{
     border-right: solid 0.067em rgba(43,117,113,0.87);
+}
+
+.documentationOverview input {
+  font-family: "Walt-Disney-Script-v41";
 }
