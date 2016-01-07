@@ -1,5 +1,6 @@
 # sexyorganiser
-Filofax template generator
+Generation tool for filofax templates that runs completely in your browser using angular
+
 ## How to install
 - run `npm install`
 - run `npm run build-js`
