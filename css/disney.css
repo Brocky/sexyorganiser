@@ -154,3 +154,7 @@ month-overview tbody th{
 .documentationOverview input {
   font-family: "Walt-Disney-Script-v41";
 }
+
+.yearOverview month-overview {
+    font-size: 0.8em;
+}

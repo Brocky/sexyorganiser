@@ -70,7 +70,7 @@ h2.pageHead{
 month-overview {
     float: left;
 }
-.even month-overview {
+.even .overview month-overview {
     float: right;
 }
 month-overview > table {
@@ -88,11 +88,13 @@ month-overview td.holiday{
 month-overview th.monthName {
 	text-align: center;
 	border-bottom: medium none;
-	background: transparent none repeat scroll 0% 0%;
 	font-size: 1.75em;
 	position: relative;
-	top: -1.25em;
-	line-height: 0;
+}
+.overview month-overview th.monthName {
+    background: transparent none repeat scroll 0% 0%;
+    top: -1.25em;
+    line-height: 0;
 }
 
 hr.foldMark {
@@ -191,6 +193,19 @@ thead.months th:nth-of-type(1) {
 }
 .documentationOverview tbody td.end {
   border-right: 0.6mm solid;
+}
+
+.yearOverview {
+    position: relative;
+}
+.yearOverview table {
+    font-size: 0.9em;
+}
+.yearOverview table:nth-of-type(3n+0)::after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 2em;
 }
 
 @media screen {
