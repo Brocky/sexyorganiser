@@ -34,16 +34,16 @@ module.exports = function(){
 
         months[currentMonthKey]
           ['weeks']
-          [calendar.getWeekOfYear(date)]
+          [$filter('date')(date, 'w')]
           ['days']
           [calendar.getDayOfWeek(date)]
           ['active'] = true;
         months[currentMonthKey]
           ['weeks']
-          [calendar.getWeekOfYear(date)]
+          [$filter('date')(date, 'w')]
           ['active'] = true;
 
-        for (var i = 0; i <= nextCount; i++) {
+        for (var i = 1; i <= nextCount; i++) {
           var monthdate = new Date(date.getFullYear(), date.getMonth() + i, 1);
           months[$filter('date')(monthdate, 'yyyyMM')] = calendar.getMonth(monthdate);
         }
