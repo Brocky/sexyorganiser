@@ -88,12 +88,12 @@ month-overview{
 month-overview > table {
     font-size: 0.5em; /* 6pt */
 }
-month-overview td.active{
+.overview month-overview td.active{
     border-radius: 0.25em; /* 3pt */
     font-weight: 700;
 }
 
-month-overview td.active{
+.overview month-overview td.active{
   border: solid 0.1em rgba(30, 78, 108, 1);
 }
 month-overview thead th{

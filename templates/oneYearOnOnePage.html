@@ -1,3 +1,4 @@
 <div class="yearOverview">
+  <h2 class="pageHead">{{$parent.subPage.date | date : 'yyyy'}}</h2>
   <month-overview ng-model="$parent.subPage.date" prev-count="0" next-count="11"></month-overview>
 </div>
