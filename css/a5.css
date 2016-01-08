@@ -16,6 +16,10 @@ body {
 }
 .leporello .fold {
   width: 12.8cm;
+  float: left;
+}
+.leporello .fold:nth-of-type(2) {
+  float: right;
 }
 .leporello .fold .tab {
   position: absolute;

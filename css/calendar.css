@@ -194,6 +194,9 @@ thead.months th:nth-of-type(1) {
 .documentationOverview tbody td.end {
   border-right: 0.6mm solid;
 }
+.documentationOverview tbody td:first-of-type {
+  border-left: 0.01mm solid;
+}
 
 .yearOverview {
     position: relative;

@@ -89,7 +89,7 @@ h2.pageHead {
 .timeTable td.label {
     font-family: 'saxmonoregular';
 }
-month-overview:before, documentationOverview::before {
+month-overview:before {
     content: '';
     display: block;
     width: 12em;
@@ -102,7 +102,7 @@ month-overview:before, documentationOverview::before {
     transform: rotate(-22deg);
     opacity: 0.2;
 }
-.even month-overview:before, .even documentationOverview::before {
+.even month-overview:before {
     content: '';
     display: block;
     width: 12em;
@@ -114,6 +114,27 @@ month-overview:before, documentationOverview::before {
     background-size: 12em;
     transform: rotate(22deg);
     opacity: 0.2;
+}
+.documentationOverview::before {
+	content: "";
+	display: block;
+	width: 18em;
+	height: 16em;
+	position: absolute;
+	bottom: -3em;
+	right: 0px;
+	background-image: url("../img/mickey.svg");
+	background-size: 18em auto;
+	transform: rotate(-22deg);
+	opacity: 0.2;
+}
+.even .documentationOverview::before {
+	content: "";
+	display: none;
+}
+
+.documentationOverview .fold table{
+  margin: 0 auto;
 }
 
 month-overview {
