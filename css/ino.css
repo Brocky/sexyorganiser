@@ -7,10 +7,12 @@
 
 .overview {
     position: relative;
+    font-size: 0.8em;
 }
 
 h2.pageHead {
-    margin-top: 0.5em;
+    font-size: 0.6em;
+    margin-top: 0.2em;
     border-bottom: double 0.084em rgba(30, 78, 108, 1);
 }
 .pageHead > span {
@@ -22,26 +24,46 @@ h2.pageHead {
     margin-bottom: 0.15em;
 }
 .pageHead > span > span {
-    font-size: 0.316em; /* 12pt */
-    font-weight: 700;
-    display: block;
-    text-align: right;
+    display: none;
 }
 
 .dayNumber {
-    font-size: 2.667em; /* 32pt */
+    box-sizing: border-box;
+    font-size: 2.667em;
+    height: 0.6em;
     line-height: 0.4em;
+    margin-top: 0.2em;
+    padding-top: 0.2em;
+    position: relative;
+    width: 4em;
 }
 .weekOfYear {
     font-size: 0.49em; /* 32pt */
+    float: left;
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    right: 4.5em;
+}
+.even .weekOfYear {
+    float: right;
+    left: 3.5em;
+}
+.weekOfYear > br {
+    display: none;
 }
 
 .dayName {
     font-size: 1.167em; /* 14pt */
     clear: right;
+    margin-left: 0;
+    position: absolute;
+    top: 1.6em;
+    left: 18.4em;
 }
-.even .dayName {
+.even .dayName { /* gerade seite*/
     clear: left;
+    left: 4em;
 }
 .dayName > .holidayName {
     font-size: 0.857em; /* 12pt */
@@ -58,7 +80,7 @@ h2.pageHead {
 
 month-overview{
     font-family: 'Ubuntu Condensed';
-    font-size: 0.8em;
+    font-size: 0.88em;
     margin-bottom: 2em;
 }
 
