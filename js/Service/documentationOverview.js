@@ -7,15 +7,14 @@ module.exports = ['calendar', function(calendar) {
 
   var service = {};
 
-  service.generatePages = function(addPageCallBack, startDate, endDate) {
+  service.generatePages = function(addPageCallBack, ctrl) {
     var tables = [];
     var months = [];
-    var currentDate = new Date(startDate.getTime());
-    var index = 0;
+    var currentDate = new Date(ctrl.startDate.getTime());
 
     while (
-      currentDate.getFullYear() <= endDate.getFullYear()
-       && currentDate.getMonth() <= endDate.getMonth()
+      currentDate.getFullYear() <= ctrl.startDate.getFullYear()
+       && currentDate.getMonth() <= ctrl.startDate.getMonth()
      ) {
       months.push(calendar.getMonth(currentDate));
       currentDate.setMonth(currentDate.getMonth() + 1);
@@ -29,8 +28,8 @@ module.exports = ['calendar', function(calendar) {
       tables.push({months: months});
     }
 
-    addPageCallBack(0, {tables: tables, year: startDate.getFullYear()}, true);
-    addPageCallBack(1, {year: startDate.getFullYear()}, true);
+    addPageCallBack(0, {tables: tables, year: ctrl.startDate.getFullYear()}, true);
+    addPageCallBack(1, {year: ctrl.startDate.getFullYear()}, true);
   };
 
   return service;

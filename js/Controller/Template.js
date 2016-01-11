@@ -70,7 +70,7 @@ module.exports = ['$scope', '$injector', 'session', function($scope, $injector, 
   $scope.generateTemplate = function() {
     $scope.pages = [];
     var template = $injector.get($scope.template);
-    template.generatePages($scope.addPage, $scope.startDate, $scope.endDate);
+    template.generatePages($scope.addPage, $scope);
   };
 
   $scope.generateTemplate();
