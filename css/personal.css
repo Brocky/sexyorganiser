@@ -21,9 +21,9 @@ body {
 
 .pageBody {
   /* size of Personal + 0.09cm on each side for bleeding*/
-  width: 9.68cm;
-  height: 17.28cm;
-  padding: 0.39cm 0.39cm 0.38cm 1.29cm;
+  width: 9.66cm;
+  height: 17.26cm;
+  padding: 0.38cm 0.38cm 0.38cm 1.28cm;
   margin: 0;
   float: left;
   box-sizing: padding-box !important;
@@ -37,8 +37,8 @@ body {
 
 x-crop-mark {
   position: absolute;
-  width: 0.09cm;
-  height: 0.09cm;
+  width: 0.08cm;
+  height: 0.08cm;
   box-sizing: border-box;
   border: solid 0.05cm #000;
 }
